@@ -183,18 +183,18 @@ async def account_login(bot: Client, m: Message):
             #     url = requests.get(f'https://api.classplusapp.com/cams/uploader/video/jw-signed-url?url={url}', headers={'x-access-token': tokencp}).json()['url']
             
             
-            elif "apps-s3-jw-prod.utkarshapp.com" in url:
-                if 'enc_plain_mp4' in url:
-                    url = url.replace(url.split("/")[-1], res+'.mp4')
+            # elif "apps-s3-jw-prod.utkarshapp.com" in url:
+            #     if 'enc_plain_mp4' in url:
+            #         url = url.replace(url.split("/")[-1], res+'.mp4')
                     
-                elif 'Key-Pair-Id' in url:
-                    url = None
+            #     elif 'Key-Pair-Id' in url:
+            #         url = None
                     
-                elif '.m3u8' in url:
-                    q = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).split("/")[0]
-                    x = url.split("/")[5]
-                    x = url.replace(x, "")
-                    url = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).replace(q+"/", x)
+            #     elif '.m3u8' in url:
+            #         q = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).split("/")[0]
+            #         x = url.split("/")[5]
+            #         x = url.replace(x, "")
+            #         url = ((m3u8.loads(requests.get(url).text)).data['playlists'][1]['uri']).replace(q+"/", x)
                 
                 
             elif "edge.api.brightcove.com" in url:
