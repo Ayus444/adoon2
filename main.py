@@ -40,7 +40,7 @@ except ValueError:
 ADMINS.append(OWNER)
 
 bot = Client("bot",    
-   bot_token="7463278701:AAHae3ouyVOOnDd05iR1ZwADn62JRKjhzn8",    
+   bot_token="7200879095:AAFfPPaUzsMY8I0UnzGXBNUI4BDz0I9fL8I",    
    api_id= 21179966,    
    api_hash= "d97919fb0a3c725e8bb2a25bbb37d57c"
 )
@@ -209,7 +209,7 @@ async def account_login(bot: Client, m: Message):
 
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()    
-            name = f'{str(count).zfill(3)}) ➵ᴹᴿ°ℂr‌𝕒c‌k‌єr࿐⁰³{name1[:60]}'  
+            name = f'{str(count).zfill(3)}) 😎𝖘cᾰ𝗺𝗺ⲉ𝗿:)™~{name1[:60]}'  
 
             if "youtu" in url:
                 ytf = f"b[height<={raw_text2}][ext=mp4]/bv[height<={raw_text2}][ext=mp4]+ba[ext=m4a]/b[ext=mp4]"
@@ -227,8 +227,8 @@ async def account_login(bot: Client, m: Message):
 
             try:
   
-                cc = f'**[ 🎬 ] 𝗩𝗜𝗗 𝗜𝗗 : {str(count).zfill(3)}**\n**𝐕𝐢𝐝𝐞𝐨 𝐓𝐢𝐭𝐥𝐞** : {name1}**({res}) ➵ᴹᴿ°ℂr‌𝕒c‌k‌єr࿐⁰³**.mp4\n\n**𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘** : **{b_name}**\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤ {MR}**\n\n'    
-                cc1 = f'**[ 📕 ] 𝗣𝗗𝗙 𝗜𝗗 : {str(count).zfill(3)}**\n**𝐏𝐝𝐟 𝐓𝐢𝐭𝐥𝐞** : {name1} ** ➵ᴹᴿ°ℂr‌𝕒c‌k‌єr࿐⁰³.pdf \n\n**𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘** : **{b_name}**\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤ {MR}**\n'    
+                cc = f'**[ 🎬 ] 𝗩𝗜𝗗 𝗜𝗗 : {str(count).zfill(3)}**\n**𝐕𝐢𝐝𝐞𝐨 𝐓𝐢𝐭𝐥𝐞** : {name1}**({res}) 😎𝖘cᾰ𝗺𝗺ⲉ𝗿:)™~**.mp4\n\n**𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘** : **{b_name}**\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤ {MR}**\n\n'    
+                cc1 = f'**[ 📕 ] 𝗣𝗗𝗙 𝗜𝗗 : {str(count).zfill(3)}**\n**𝐏𝐝𝐟 𝐓𝐢𝐭𝐥𝐞** : {name1} ** 😎𝖘cᾰ𝗺𝗺ⲉ𝗿:)™~.pdf \n\n**𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘** : **{b_name}**\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤ {MR}**\n'    
                 if "drive" in url:    
                     try:    
                         ka = await helper.download(url, name)    
