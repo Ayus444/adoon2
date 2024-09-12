@@ -268,11 +268,12 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"    
                         os.system(download_cmd)    
                         copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=thumb, caption=cc1)    
-                        count +=1    
+                        count +=1
+                        time.sleep(2)
                         os.remove(f'{name}.pdf')    
                     except FloodWait as e:    
                         await m.reply_text(str(e))    
-                        time.sleep(e.x)    
+                        time.sleep(2)    
                         continue
                     
                 elif "youtu" in url:
