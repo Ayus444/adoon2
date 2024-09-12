@@ -56,9 +56,27 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("**👋 ʜᴇʟʟᴏ!\n🌟ɪ ᴀᴍ ᴛxᴛ ꜰɪʟᴇ ᴅᴏᴡʟᴏᴀᴅᴇʀ ʙᴏᴛ** \n\n❤️‍🔥 **ᴘʀᴇꜱꜱ /scammer ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴠɪᴅᴇᴏ ʙʏ ᴛxᴛ**\n\n❤️‍🩹 **ᴊᴏɪɴ ᴏᴜʀ <a href='https://t.me/scammer_botz'>ᴛᴇʟᴇɢʀᴀᴍ ᴄʜᴀɴɴᴇʟ</a>** \n\n💗 ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='https://t.me/scammer_botz'>😎𝖘cᾰ𝗺𝗺ⲉ𝗿:)™~ </a>\n-═════━‧₊˚❀༉‧₊˚.━═════-") 
 
 @bot.on_message(filters.command("Stop"))    
-async def restart_handler(_, m):    
-    await m.reply_text("🚯 **ꜱᴛᴏᴘᴘᴇᴅ** 🚯", True)    
-    os.execl(sys.executable, sys.executable, *sys.argv)
+async def restart_handler(_, m):
+    
+        if failed_links:
+         error_file_send = await m.reply_text("**📤 Sending you Failed Downloads List Before Stoping   **")
+         with open("failed_downloads.txt", "w") as f:
+          for link in failed_links:
+            f.write(link + "\n")
+    # After writing to the file, send it
+         await m.reply_document(document="failed_downloads.txt", caption=fail_cap)
+         await error_file_send.delete()
+         os.remove(f'failed_downloads.txt')
+         failed_links.clear()
+         processing_request = False  # Reset the processing flag
+         #await m.reply_text("**Note This Is BETA Stage May have Bugs  **")
+         await m.reply_text("🚦**STOPPED**🚦", True)
+         os.execl(sys.executable, sys.executable, *sys.argv)
+        else:
+         processing_request = False  # Reset the processing flag
+         #await m.reply_text("**Note This Is BETA Stage May have Bugs  **")
+         await m.reply_text("🚦**STOPPED**🚦", True)
+         os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 @bot.on_message(filters.command(["scammer"]))    
