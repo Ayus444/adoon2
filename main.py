@@ -241,6 +241,9 @@ async def account_login(bot: Client, m: Message):
             elif ".pdf" in url:
                 url = url.replace(" ","%20")
 
+            elif "/khansirvod4" and "akamaized" and '.m3u8' in url:
+              url = url.replace(url.split("/")[-1], raw_text2+".m3u8") 
+
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()    
             name = f'{str(count).zfill(3)})😎𝖘cᾰ𝗺𝗺ⲉ𝗿:)™~{name1[:60]}'  
