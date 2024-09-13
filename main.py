@@ -33,7 +33,7 @@ getstatusoutput(f"wget {photo1} -O 'photo.jpg'")
 photo = "photo.jpg"
 
 photo2 = 'https://envs.sh/PXK.jpg'
-getstatusoutput(f"wget {photo2} -O 'photo.jpg'")    
+getstatusoutput(f"wget {photo2} -O 'photo2.jpg'")    
 photo2s = "photo2.jpg"
 
 failed_links = []  
