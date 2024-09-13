@@ -295,7 +295,7 @@ async def account_login(bot: Client, m: Message):
                         count +=1
                     except Exception as e:
                         await m.reply_text(str(e))    
-                        time.sleep(5)    
+                        await asyncio.sleep(3)   
                         continue
                          
                           
