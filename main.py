@@ -50,7 +50,7 @@ except ValueError:
 ADMINS.append(OWNER)
 
 bot = Client("bot",    
-   bot_token="7406875919:AAHGJB-GFD3hhJwWJqq_KnVSL9BwbizWPbc",    
+   bot_token="7341057146:AAGW0VvAGgDGPRhzJTQTLIiwyljrhT5Mxgo",    
    api_id= 21179966,    
    api_hash= "d97919fb0a3c725e8bb2a25bbb37d57c"
 )
@@ -241,7 +241,7 @@ async def account_login(bot: Client, m: Message):
             elif ".pdf" in url:
                 url = url.replace(" ","%20")
 
-            elif "/khansirvod4" and "akamaized" and '.m3u8' in url:
+            elif "/khansirvod4" in url and "akamaized" in url and '.m3u8' in url:
               url = url.replace(url.split("/")[-1], raw_text2+".m3u8") 
 
 
