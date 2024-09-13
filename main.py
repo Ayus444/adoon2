@@ -32,6 +32,10 @@ photo1 = 'https://envs.sh/PQ_.jpg'
 getstatusoutput(f"wget {photo1} -O 'photo.jpg'")    
 photo = "photo.jpg"
 
+photo2 = 'https://envs.sh/PXK.jpg'
+getstatusoutput(f"wget {photo2} -O 'photo.jpg'")    
+photo2s = "photo2.jpg"
+
 failed_links = []  
 fail_cap =f"**➜ This file Contain Failed Downloads while Downloding \n You Can Retry them one more time **"
 
@@ -267,7 +271,7 @@ async def account_login(bot: Client, m: Message):
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'    
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"    
                         os.system(download_cmd)    
-                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=thumb, caption=cc1)    
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=photo2s, caption=cc1)    
                         count +=1
                         os.remove(f'{name}.pdf')    
                     except FloodWait as e:    
