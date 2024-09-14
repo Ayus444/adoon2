@@ -590,17 +590,17 @@ async def account_login(bot: Client, m: Message):
               url = url.replace(url.split("/")[-1], raw_text2+".m3u8")
               
             elif "kgs-v3.akamaized.net" in url:
-                if raw_text2 == 360:
+                if raw_text2 == '360':
                    url = url.replace('.m3u8', "_360p878kbs/index.m3u8")
-                elif raw_text2 == 240:
+                elif raw_text2 == '240':
                    url = url.replace('.m3u8', "_240p264kbs/index.m3u8")
-                elif raw_text2 == 144:
+                elif raw_text2 == '144':
                     url = url.replace('.m3u8', "_144p190kbs/index.m3u8")
-                elif raw_text2== 720:
+                elif raw_text2== '720':
                     url = url.replace('.m3u8', "_720p2628kbs/index.m3u8")
-                elif raw_text2 == 1080:
+                elif raw_text2 == '1080':
                     url = url.replace('.m3u8', "_720p2628kbs/index.m3u8")
-                elif raw_text2 == 480:
+                elif raw_text2 == '480':
                     url = url.replace('.m3u8', "_360p878kbs/index.m3u8")
                 
             elif 'youtu' in url:
