@@ -32,6 +32,10 @@ photo1 = 'https://envs.sh/PQ_.jpg'
 getstatusoutput(f"wget {photo1} -O 'photo.jpg'")    
 photo = "photo.jpg"
 
+photo2 = 'https://envs.sh/PQ_.jpg'
+getstatusoutput(f"wget {photo2} -O 'photo2.jpg'")    
+photo2s = "photo2.jpg"
+
 failed_links = []  
 fail_cap =f"**➜ This file Contain Failed Downloads while Downloding \n You Can Retry them one more time **"
 
@@ -46,7 +50,7 @@ except ValueError:
 ADMINS.append(OWNER)
 
 bot = Client("bot",    
-   bot_token="7341057146:AAGW0VvAGgDGPRhzJTQTLIiwyljrhT5Mxgo",    
+   bot_token="7412431777:AAFwfsOegtbhdq8FpCqBvQ1UJVs6GtJbYDg",    
    api_id= 21179966,    
    api_hash= "d97919fb0a3c725e8bb2a25bbb37d57c"
 )
@@ -426,7 +430,7 @@ async def account_login(bot: Client, m: Message):
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'    
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"    
                         os.system(download_cmd)    
-                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=thumb, caption=cc1)    
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=photo2s, caption=cc1)    
                         count +=1
                         time.sleep(2)    
                         os.remove(f'{name}.pdf')    
@@ -590,17 +594,17 @@ async def account_login(bot: Client, m: Message):
               url = url.replace(url.split("/")[-1], raw_text2+".m3u8")
               
             elif "kgs-v3.akamaized.net" in url:
-                if raw_text2 == '360':
+                if raw_text2 == 360:
                    url = url.replace('.m3u8', "_360p878kbs/index.m3u8")
-                elif raw_text2 == '240':
+                elif raw_text2 == 240:
                    url = url.replace('.m3u8', "_240p264kbs/index.m3u8")
-                elif raw_text2 == '144':
+                elif raw_text2 == 144:
                     url = url.replace('.m3u8', "_144p190kbs/index.m3u8")
-                elif raw_text2== '720':
+                elif raw_text2== 720:
                     url = url.replace('.m3u8', "_720p2628kbs/index.m3u8")
-                elif raw_text2 == '1080':
+                elif raw_text2 == 1080:
                     url = url.replace('.m3u8', "_720p2628kbs/index.m3u8")
-                elif raw_text2 == '480':
+                elif raw_text2 == 480:
                     url = url.replace('.m3u8', "_360p878kbs/index.m3u8")
                 
             elif 'youtu' in url:
@@ -641,7 +645,7 @@ async def account_login(bot: Client, m: Message):
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'    
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"    
                         os.system(download_cmd)    
-                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=thumb, caption=cc1)    
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=photo2s, caption=cc1)    
                         count +=1
                         time.sleep(2)    
                         os.remove(f'{name}.pdf')    
@@ -840,7 +844,7 @@ async def account_login(bot: Client, m: Message):
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'    
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"    
                         os.system(download_cmd)    
-                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=thumb, caption=cc1)    
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=photo2s, caption=cc1)    
                         count +=1
                         time.sleep(2)    
                         os.remove(f'{name}.pdf')    
@@ -1044,7 +1048,7 @@ async def account_login(bot: Client, m: Message):
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'    
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"    
                         os.system(download_cmd)    
-                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=thumb, caption=cc1)    
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=photo2s, caption=cc1)    
                         count +=1
                         time.sleep(2)    
                         os.remove(f'{name}.pdf')    
@@ -1252,7 +1256,7 @@ async def account_login(bot: Client, m: Message):
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'    
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"    
                         os.system(download_cmd)    
-                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=thumb, caption=cc1)    
+                        copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', thumb=photo2s, caption=cc1)    
                         count +=1
                         time.sleep(2)    
                         os.remove(f'{name}.pdf')    
